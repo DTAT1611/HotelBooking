@@ -14,6 +14,7 @@ namespace HotelBooking.Views.Admin
         {
             Con = new Models.Functions();
             ShowCategories();
+            LogedUser.InnerText = Session["UserName"] as string;
         }
         public override void VerifyRenderingInServerForm(Control control)
         {
@@ -21,7 +22,7 @@ namespace HotelBooking.Views.Admin
         }
         private void ShowCategories()
         {
-            string Query = "select CatId as Id,CatName as Categories,CatName as Categories,CatRemarks as Remarks from CategoryTbl";
+            string Query = "select CatId as Id,CatName as Categories,CatRemarks as Remarks from CategoryTbl";
             CategoriesGV.DataSource= Con.GetData(Query);
             CategoriesGV.DataBind();
         }
@@ -47,7 +48,7 @@ namespace HotelBooking.Views.Admin
         {
             Key = Convert.ToInt32(CategoriesGV.SelectedRow.Cells[1].Text);
             CatNameTb.Value = CategoriesGV.SelectedRow.Cells[2].Text;
-            RemarkTb.Value = CategoriesGV.SelectedRow.Cells[4].Text;
+            RemarkTb.Value = CategoriesGV.SelectedRow.Cells[3].Text;
 
         }
 

@@ -7,57 +7,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelBooking.Views.Admin
+namespace HotelBooking.Views.User
 {
 
 
-    public partial class Categories
+    public partial class Booking
     {
 
         /// <summary>
-        /// LogedUser control.
+        /// RoomTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LogedUser;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText RoomTb;
 
         /// <summary>
-        /// CatNameTb control.
+        /// DateInTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText CatNameTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DateInTb;
 
         /// <summary>
-        /// RemarkTb control.
+        /// DateOutTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText RemarkTb;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl DateOutTb;
 
         /// <summary>
-        /// EditBtn control.
+        /// AmountTb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EditBtn;
-
-        /// <summary>
-        /// DeleteBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText AmountTb;
 
         /// <summary>
         /// ErrMsg control.
@@ -69,21 +60,39 @@ namespace HotelBooking.Views.Admin
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ErrMsg;
 
         /// <summary>
-        /// SaveBtn control.
+        /// BookBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SaveBtn;
+        protected global::System.Web.UI.WebControls.Button BookBtn;
 
         /// <summary>
-        /// CategoriesGV control.
+        /// ResetBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CategoriesGV;
+        protected global::System.Web.UI.WebControls.Button ResetBtn;
+
+        /// <summary>
+        /// RoomsGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView RoomsGV;
+
+        /// <summary>
+        /// BookingGV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView BookingGV;
     }
 }
