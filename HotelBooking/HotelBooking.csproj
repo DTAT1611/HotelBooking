@@ -104,6 +104,7 @@
     <Content Include="Views\Admin\Rooms.aspx" />
     <Content Include="Views\Admin\Users.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\Register.aspx" />
     <Content Include="Views\User\Booking.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\User\Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>

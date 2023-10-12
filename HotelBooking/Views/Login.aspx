@@ -30,11 +30,11 @@
                 <form>
           <div class="mb-3">
             <label for="EmailTb" class="form-label">Email address</label>
-            <input type="text" class="form-control" id="UserTb" runat="server" required="required"/>
+            <input type="text" class="form-control" id="UserTb" runat="server" />
           </div>
           <div class="mb-3">
             <label for="PasswordTb" class="form-label">Password</label>
-            <input type="password" class="form-control" id="PasswordTb" runat="server" required="required"/>
+            <input type="password" class="form-control" id="PasswordTb" runat="server" />
           </div>
           <div class="mb-3 ">
               <label id="ErrMsg" class="text-danger" runat="server"></label>
@@ -44,7 +44,8 @@
                     <div class="d-grid">
                         <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-success btn-block" OnClick="LoginBtn_Click" />
                     </div>
-        
+                    <br />
+                       <a class="nav-link text-success" href="Register.aspx">Register</a>
                     <br />
                     
         </form>
@@ -58,3 +59,10 @@
     </form>
 </body>
 </html>
+<script>
+    window.onload = function() {
+        var passwordInput = document.getElementById("PasswordTb");
+        passwordInput.type = "password";
+    };
+</script>
+

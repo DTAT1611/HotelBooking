@@ -51,5 +51,13 @@ namespace HotelBooking.Views
                 }
             }
         }
+
+
+
+
+        protected void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Register.aspx");
+        }
     }
 }
