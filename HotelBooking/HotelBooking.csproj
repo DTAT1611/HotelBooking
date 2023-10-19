@@ -106,6 +106,7 @@
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
     <Content Include="Views\User\Booking.aspx" />
+    <Content Include="Views\User\RoomAvailabel.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,13 @@
     </Compile>
     <Compile Include="Views\User\Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\RoomAvailabel.aspx.cs">
+      <DependentUpon>RoomAvailabel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\User\RoomAvailabel.aspx.designer.cs">
+      <DependentUpon>RoomAvailabel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\User\UserMaster.Master.cs">
       <DependentUpon>UserMaster.Master</DependentUpon>

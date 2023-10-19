@@ -43,6 +43,32 @@ namespace HotelBooking.Views.Admin
                 ErrMsg.InnerText=Ex.Message;
             }
         }
+        private void UpdateRoom()
+        {
+            try
+            {
+                string St = "Booked";
+                string Query = "update RoomTbl set Status='{0}' where RId={1}";
+                Query = string.Format(Query, St, CategoriesGV.SelectedRow.Cells[1].Text);
+                Con.setData(Query);
+            }
+            catch (Exception Ex)
+            {
+                ErrMsg.InnerText = Ex.Message;
+            }
+        }
+        int TCost;
+        private void GetCost()
+        {
+
+        }
+        private void ShowUsers()
+        {
+            string Query = "Select * from UserTbl";
+            CategoriesGV.DataSource = Con.GetData(Query);
+            CategoriesGV.DataBind();
+        }
+
         int Key = 0;
         protected void CategoriesGV_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,6 +77,7 @@ namespace HotelBooking.Views.Admin
             RemarkTb.Value = CategoriesGV.SelectedRow.Cells[3].Text;
 
         }
+        
 
         protected void Button2_Click(object sender, EventArgs e)
         {

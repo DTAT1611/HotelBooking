@@ -38,7 +38,7 @@
                                <div>
                         <label id="ErrMsg" runat="server" class="text-danger"></label>
                         <asp:Button ID="BookBtn" runat="server" Text="Book Room" class="btn btn-warning" OnClick="BookBtn_Click"/>
-                         <asp:Button ID="ResetBtn" runat="server" Text="Reset" class="btn btn-danger"/>
+                         <asp:Button ID="ResetBtn" runat="server" Text="Reset" class="btn btn-danger" OnClick="ResetBtn_Click"/>
                     </div>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                    </div>
                 <div class="row">
                     <div class="col">
-                         <asp:GridView ID="BookingGV" runat="server" class="table" CellPadding="4" ForeColor="#333333" GridLines="None">
+                         <asp:GridView ID="BookingGV" runat="server" class="table" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="BookingGV_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:TemplateField ShowHeader="False">
@@ -98,3 +98,4 @@
         </div>
     </div>
 </asp:Content>
+

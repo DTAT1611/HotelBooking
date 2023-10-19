@@ -91,5 +91,48 @@ namespace HotelBooking.Views.User
                 ErrMsg.InnerText = Ex.Message;
             }
         }
+
+        protected void BookingGV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Key = Convert.ToInt32(BookingGV.SelectedRow.Cells[1].Text);
+            RoomTb.Value = BookingGV.SelectedRow.Cells[3].Text;
+            DateOutTb.Value = BookingGV.SelectedRow.Cells[6].Text;
+            DateInTb.Value = BookingGV.SelectedRow.Cells[5].Text;
+            int Cost = Days * Convert.ToInt32(BookingGV.SelectedRow.Cells[4].Text);
+            AmountTb.Value = Cost.ToString();
+
+        }
+        private void DeleteRoom()
+        {
+            try
+            {
+                string St = "Availabel";
+                string Query = "update RoomTbl set Status='{0}' where RId={1}";
+                Query = string.Format(Query, St, BookingGV.SelectedRow.Cells[1].Text);
+                Con.setData(Query);
+                ShowRooms();
+            }
+            catch (Exception Ex)
+            {
+                ErrMsg.InnerText = Ex.Message;
+            }
+        }
+        protected void ResetBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string Query = "delete from BookingTbl where BId={0}";
+                Query = string.Format(Query, BookingGV.SelectedRow.Cells[1].Text);
+                Con.setData(Query);
+                ShowRooms();
+                DeleteRoom();
+                ErrMsg.InnerText = "Booking Deleted!!!";
+            }
+            catch (Exception Ex)
+            {
+                ErrMsg.InnerText = Ex.Message;
+            }
+        }
     }
 }
