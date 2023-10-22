@@ -36,7 +36,7 @@ namespace HotelBooking.Models
         }
         public Functions()
         {
-            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ADMIN\OneDrive\Documents\HotelAsp.mdf;Integrated Security=True;Connect Timeout=30";
+            ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\unkno\OneDrive\Documents\HotelAsp.mdf;Integrated Security=True;Connect Timeout=30";
             Con=new SqlConnection(ConStr);
             Cmd = new SqlCommand();
             Cmd.Connection=Con;
