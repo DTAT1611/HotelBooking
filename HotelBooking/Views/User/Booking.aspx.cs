@@ -49,7 +49,6 @@ namespace HotelBooking.Views.User
                 Query = string.Format(Query,St, RoomsGV.SelectedRow.Cells[1].Text);
                 Con.setData(Query);
                 ShowRooms();
-                //ErrMsg.InnerText = "Room Updated!!!";
             }
             catch (Exception Ex)
             {
