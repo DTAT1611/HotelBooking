@@ -1,6 +1,7 @@
 ﻿using HotelBooking.Views.Admin;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -58,8 +59,9 @@ namespace HotelBooking.Views.User
         int TCost;
         private void GetCost()
         {
-            DateTime DIn = Convert.ToDateTime(DateInTb.Value);
-            DateTime DOut=Convert.ToDateTime(DateOutTb.Value);
+            // Date Time = DDMMYY
+            DateTime DIn = DateTime.TryParseExact(DateInTb.Value.ToString(),"dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            DateTime DOut = DateTime.ParseExact(DateOutTb.Value.ToString(),"dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             TimeSpan value=DOut.Subtract(DIn);
             int Days=Convert.ToInt32(value.TotalDays);
             TCost =Days * Convert.ToInt32(RoomsGV.SelectedRow.Cells[4].Text);
