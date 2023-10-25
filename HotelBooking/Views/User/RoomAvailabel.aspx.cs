@@ -25,7 +25,21 @@ namespace HotelBooking.Views.User
             RoomsGV.DataSource = Con.GetData(Query);
             RoomsGV.DataBind();
         }
-
+        private void UpdateRoom()
+        {
+            try
+            {
+                string St = "Booked";
+                string Query = "update RoomTbl set Status='{0}' where RId={1}";
+                Query = string.Format(Query, St, RoomsGV.SelectedRow.Cells[1].Text);
+                Con.setData(Query);
+                ShowRooms();
+            }
+            catch (Exception Ex)
+            {
+                ErrMsg.InnerText = Ex.Message;
+            }
+        }
 
 
     }

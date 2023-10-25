@@ -63,6 +63,7 @@ namespace HotelBooking.Views.User
             TimeSpan value=DOut.Subtract(DIn);
             int Days=Convert.ToInt32(value.TotalDays);
             TCost =Days * Convert.ToInt32(RoomsGV.SelectedRow.Cells[4].Text);
+         
         }
         protected void BookBtn_Click(object sender, EventArgs e)
         {
@@ -74,7 +75,6 @@ namespace HotelBooking.Views.User
                 string OutDate = DateOutTb.Value.ToString();
                 string Agent = Session["UId"]  as string;
                 GetCost();
-               
                 string Query = "insert into BookingTbl values ('{0}','{1}','{2}','{3}','{4}','{5}')";
                 Query = string.Format(Query, BDate, RId, Agent, InDate, OutDate, TCost);
                 Con.setData(Query);
@@ -94,12 +94,12 @@ namespace HotelBooking.Views.User
 
         protected void BookingGV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Key = Convert.ToInt32(BookingGV.SelectedRow.Cells[1].Text);
-            RoomTb.Value = BookingGV.SelectedRow.Cells[3].Text;
-            DateOutTb.Value = BookingGV.SelectedRow.Cells[6].Text;
-            DateInTb.Value = BookingGV.SelectedRow.Cells[5].Text;
-            int Cost = Days * Convert.ToInt32(BookingGV.SelectedRow.Cells[4].Text);
-            AmountTb.Value = Cost.ToString();
+                Key = Convert.ToInt32(BookingGV.SelectedRow.Cells[1].Text);
+                RoomTb.Value = BookingGV.SelectedRow.Cells[3].Text;
+                DateOutTb.Value = BookingGV.SelectedRow.Cells[6].Text;
+                DateInTb.Value = BookingGV.SelectedRow.Cells[5].Text;
+                int Cost = Days * Convert.ToInt32(BookingGV.SelectedRow.Cells[4].Text);
+                AmountTb.Value = Cost.ToString();
 
         }
         private void DeleteRoom()
